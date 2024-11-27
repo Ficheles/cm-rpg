@@ -6,7 +6,7 @@
         <section class="w-full max-w-lg bg-gray-800 rounded-lg shadow-lg p-8">
             <h2 class="text-3xl font-bold text-center text-purple-400 mb-6">Cadastrar Novo Player</h2>
             
-            <form action="/api/v1/players" method="POST" class="space-y-6" id="player-form">
+            <form action="/app/v1/players" method="POST" class="space-y-6" id="player-form">
                 <!-- CSRF Token -->
                 @csrf
 

@@ -22,7 +22,6 @@ Route::get('/cadastre-se', function() {
     return view('players.create', compact('classes'));
 });
 
-
 Route::get('/ranking', function () {
 
     $players = Player::with(['class', 'guild'])->orderBy('xp', 'desc')->get();
@@ -37,10 +36,7 @@ Route::get('/guildas', function () {
     return view('guilds.guild-card', compact( 'guilds'));
 });
 
-
 Route::get('/guilda/{guild}/players', [GuildController::class, 'showPlayers'])->name('guild.players');
-
-
 
 Route::get('/organizar', function () {
     $confirmedPlayers = Player::where('confirmed', true)->count();
@@ -48,7 +44,3 @@ Route::get('/organizar', function () {
     return view('guilds.create-guilds', compact('confirmedPlayers'));
 });
 
-Route::get('test', function (){
-    $confirmed = true;
-    return view('pages.test', compact('confirmed'));
-});

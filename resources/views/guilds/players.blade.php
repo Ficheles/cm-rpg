@@ -79,18 +79,15 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Seleciona todos os slides de confirmação
         const toggleButtons = document.querySelectorAll('.toggle__checkbox');
 
         toggleButtons.forEach(toggleButton => {
-            // Evento para monitorar as mudanças no slide
             toggleButton.addEventListener('change', function () {
                 const playerId = toggleButton.getAttribute('data-id');
                 const isChecked = toggleButton.checked;
                 const toggleDot = toggleButton.nextElementSibling.querySelector('.toggle__dot');
                 const statusText = toggleButton.closest('.flex').querySelector('span.text-sm');
 
-                // Atualiza a interface
                 if (isChecked) {
                     toggleDot.classList.add('translate-x-4', 'bg-green-400');
                     toggleDot.classList.remove('translate-x-0', 'bg-red-400');
@@ -105,12 +102,12 @@
                     statusText.innerText = 'Não confirmado';
                 }
 
-                // Envia a requisição à API para atualizar o estado do player
-                fetch(`/api/players/${playerId}/confirm`, {
+                
+                fetch(`/app/players/${playerId}/confirm`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}' // Inclua o token CSRF para garantir a segurança
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}' 
                     },
                     body: JSON.stringify({ confirmed: isChecked })
                 })

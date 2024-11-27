@@ -6,7 +6,7 @@ document.getElementById('player-form').addEventListener('submit', async function
     const formData = new FormData(this);
 
     try {
-        const response = await fetch('/api/v1/form-guilds', {
+        const response = await fetch('/app/v1/form-guilds', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

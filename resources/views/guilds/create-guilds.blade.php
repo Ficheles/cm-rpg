@@ -12,7 +12,7 @@
         </div>
 
         <!-- Formulário -->
-        <form action="/api/v1/form-guilds" method="POST" id="create-guilds-form">
+        <form action="/app/v1/form-guilds" method="POST" id="create-guilds-form">
             @csrf
             <div class="mb-8">
                 <label for="number_of_guilds" class="block text-sm font-medium">Número de Guildas</label>

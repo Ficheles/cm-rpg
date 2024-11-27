@@ -1,18 +1,15 @@
-// Seleciona todos os checkboxes com base no atributo "data-id"
 const checkboxes = document.querySelectorAll('input[type="checkbox"][data-id]');
 
-// Adiciona evento de "change" a cada checkbox
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', async (event) => {
-    const playerId = event.target.getAttribute('data-id'); // Obtém o ID do jogador
-    const isChecked = event.target.checked; // Verifica o estado do checkbox
-
-    // Mostra feedback visual ao usuário (opcional)
+    const playerId = event.target.getAttribute('data-id');
+    const isChecked = event.target.checked; 
+    
     event.target.disabled = true;
 
     try {
-      // Faz a requisição para a API para persistir a mudança
-      const response = await fetch(`/api/v1/players/${playerId}/confirm`, {
+      
+      const response = await fetch(`/app/v1/players/${playerId}/confirm`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -30,11 +27,10 @@ checkboxes.forEach((checkbox) => {
     } catch (error) {
       console.error('Erro ao atualizar jogador:', error);
 
-      // Reverte o estado do checkbox em caso de erro
       event.target.checked = !isChecked;
       alert('Erro ao salvar alteração. Tente novamente!');
     } finally {
-      // Reabilita o checkbox após o término da requisição
+
       event.target.disabled = false;
     }
   });

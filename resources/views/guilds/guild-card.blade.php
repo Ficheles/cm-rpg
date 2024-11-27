@@ -2,9 +2,6 @@
 
 @section('content')
 
-
-
-
 <div class="max-w-7xl mx-auto my-8 ">
   <h1 class="text-2xl font-bold text-center mb-6">Guilds</h1>
 
