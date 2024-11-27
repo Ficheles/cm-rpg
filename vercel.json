@@ -5,6 +5,10 @@
       }
     },
     "routes": [{
+        "src": "/build(.)",
+        "dest": "public/assets/"
+    },
+    {
         "src": "/(.*)",
         "dest": "/api/index.php"
     }],
