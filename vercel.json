@@ -6,11 +6,11 @@
     },
     "routes": [{
         "src": "/build(.)",
-        "dest": "public/assets/"
+        "dest": "/public/assets/"
     },
     {
         "src": "/(css|js)/(.*)",
-        "dest": "public/$1/$2"
+        "dest": "/public/$1/$2"
     },
     {
         "src": "/assets/(logos)/(.*)",
