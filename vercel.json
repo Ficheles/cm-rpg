@@ -9,6 +9,14 @@
         "dest": "public/assets/"
     },
     {
+        "src": "/(css|js)/(.*)",
+        "dest": "public/$1/$2"
+    },
+    {
+        "src": "/assets/(logos)/(.*)",
+        "dest": "/public/assets/$1"
+    },
+    {
         "src": "/(.*)",
         "dest": "/api/index.php"
     }],
