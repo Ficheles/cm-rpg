@@ -74,5 +74,5 @@
 @endsection
 
 @push('scripts')
-    <script src="{{ asset('js/playerForm.js') }}"></script>
+    <script src="{{ secure_asset('js/playerForm.js') }}"></script>
 @endpush

@@ -54,5 +54,5 @@
 
 
 @push('scripts')
-    <script src="{{ asset('js/playerConfirm.js') }}"></script>
+    <script src="{{ secure_asset('js/playerConfirm.js') }}"></script>
 @endpush

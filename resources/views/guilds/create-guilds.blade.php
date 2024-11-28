@@ -40,5 +40,5 @@
 
 
 @push('scripts')
-    <script src="{{ asset('js/createGuildsForm.js') }}"></script>
+    <script src="{{ secure_asset('js/createGuildsForm.js') }}"></script>
 @endpush
