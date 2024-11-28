@@ -8,14 +8,10 @@
     <link rel="icon" href="/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="/css/style.css" rel="stylesheet">
-
-    
+    <link href="/css/style.css" rel="stylesheet">    
 </head>
 <body class="min-h-screen flex flex-col bg-gray-900 text-white">
     @include('layouts.header')
-
-
     
     <main class="flex-grow items-center justify-center text-gray-300">
         @yield('content')
