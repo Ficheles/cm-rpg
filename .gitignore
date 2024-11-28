@@ -1,0 +1,8 @@
+/vendor
+/storage
+/dist
+/bootstrap/cache
+
+.env
+.env.testing
+.phpunit.result.cache
