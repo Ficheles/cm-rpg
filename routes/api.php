@@ -6,10 +6,6 @@ use App\Http\Controllers\Api\RpgClassController;
 use App\Http\Controllers\Api\PlayerController;
 use App\Http\Controllers\Api\GuildController;
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
 Route::prefix('v1')->group(function () {
     Route::apiResource('classes', RpgClassController::class);
     Route::apiResource('players', PlayerController::class);

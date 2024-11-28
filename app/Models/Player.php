@@ -14,7 +14,6 @@ class Player extends Model
         'class_id',
         'xp',
         'confirmed',
-        // 'class'
     ];
     
     public function class()

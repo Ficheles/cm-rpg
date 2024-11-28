@@ -16,7 +16,6 @@ class GuildFactory extends Factory
 
         return [
             'name' => $this->faker->unique()->randomElement($guildNamePrefixes) . ' ' . $this->faker->randomElement($guildNameSuffixes),
-            // 'description' => $this->faker->paragraph()
         ];
     }
 }
